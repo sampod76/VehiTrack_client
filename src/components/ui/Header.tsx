@@ -2,6 +2,7 @@ import { authKey } from "@/constants/storageKey";
 import { getUserInfo, removeUserInfo } from "@/services/auth.service";
 import { UserOutlined } from "@ant-design/icons";
 import { Avatar, Button, Dropdown, Layout, MenuProps, Row, Space } from "antd";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 const { Header: AntHeader } = Layout;
 
@@ -28,30 +29,41 @@ const Header = () => {
     <AntHeader
       style={{
         background: "#fff",
+        boxShadow: "0 1px 4px gray",
+        borderBottomRightRadius: "10px",
+       borderBottomLeftRadius: "10px",
       }}
     >
       <Row
-        justify="end"
+        justify="space-between"
         align="middle"
         style={{
           height: "100%",
         }}
       >
-        <p
-          style={{
-            margin: "0px 5px",
-          }}
-        >
-          {role}
-        </p>
+        {/* <section className="flex justify-between items-center mx-1"> */}
+        
+            <Link className="font-bold cursor-pointer " href={"/dashboard"}>Dashboard</Link>
 
-        <Dropdown menu={{ items }}>
-          <a>
-            <Space wrap size={16}>
-              <Avatar size="large" icon={<UserOutlined />} />
-            </Space>
-          </a>
-        </Dropdown>
+       
+          <div className="flex justify-between items-center">
+            <p
+              style={{
+                margin: "0px 5px",
+              }}
+            >
+              {role}
+            </p>
+
+            <Dropdown menu={{ items }}>
+              <a>
+                <Space wrap size={16}>
+                  <Avatar size="large" icon={<UserOutlined />} />
+                </Space>
+              </a>
+            </Dropdown>
+          </div>
+        {/* </section> */}
       </Row>
     </AntHeader>
   );

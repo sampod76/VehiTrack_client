@@ -20,14 +20,17 @@ const Sidebar = () => {
         overflow: "auto",
         height: "100vh",
         position: "sticky",
+        backgroundColor:"white",
+        boxShadow: "10px 0 5px -2px #D1D5DB",
         left: 0,
         top: 0,
         bottom: 0,
       }}
     >
       <div
+     className=""
         style={{
-          color: "white",
+          color: "black",
           fontSize: "2rem",
           textAlign: "center",
           fontWeight: "bold",
@@ -35,10 +38,11 @@ const Sidebar = () => {
           marginTop: "1rem",
         }}
       >
-        VehiTrack
+        <h1 className="underline">V.T</h1>
+        <hr />
       </div>
       <Menu
-        theme="dark"
+        theme="light"
         defaultSelectedKeys={["1"]}
         mode="inline"
         items={sidebarItem(role)}
