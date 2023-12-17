@@ -235,7 +235,7 @@ const HomePage = () => {
           <div className="overflow-x-hidden overflow-y-auto rounded-lg bg-white md:min-h-[40vh] lgg:min-h-[60vh] px-4 py-5 shadow">
             <div className="inline-block min-w-full py-2 align-middle px-4">
               <h3 className="text-base font-medium underline underline-offset-2">
-                Recent Interested
+                Recent Trip
               </h3>
               <table className="min-w-full divide-y divide-gray-300">
                 <thead>
@@ -244,7 +244,7 @@ const HomePage = () => {
                       scope="col"
                       className="py-3.5 pl-3 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-0"
                     >
-                      Business
+                      Vehicle
                     </th>
                     <th
                       scope="col"
@@ -295,7 +295,7 @@ const HomePage = () => {
           <div className="overflow-x-hidden overflow-y-auto rounded-lg bg-white md:min-h-[40vh] lgg:min-h-[60vh] px-4 py-5 shadow">
             <div className="inline-block min-w-full py-2 align-middle px-4">
               <h3 className="text-base font-medium underline underline-offset-2">
-                Recent Not Interested
+                Pending Trip
               </h3>
               <table className="min-w-full divide-y divide-gray-300">
                 <thead>
@@ -304,7 +304,7 @@ const HomePage = () => {
                       scope="col"
                       className="py-3.5 pl-3 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-0"
                     >
-                      Business
+                      Vehicle
                     </th>
                     <th
                       scope="col"
@@ -358,7 +358,7 @@ const HomePage = () => {
           <div className="overflow-x-hidden overflow-y-auto rounded-lg bg-white md:min-h-[40vh] lgg:min-h-[60vh] px-4 py-5 shadow">
             <div className="inline-block min-w-full py-2 align-middle px-4">
               <h3 className="text-base font-medium underline underline-offset-2">
-                Recent Not Sure
+                Upcoming Maintenance
               </h3>
               <table className="min-w-full divide-y divide-gray-300">
                 <thead>
@@ -367,7 +367,7 @@ const HomePage = () => {
                       scope="col"
                       className="py-3.5 pl-3 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-0"
                     >
-                      Business
+                      Vehicle
                     </th>
                     <th
                       scope="col"

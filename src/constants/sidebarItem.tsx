@@ -23,6 +23,84 @@ export const sidebarItem = (role: string) => {
       label: <Link href={`/${role}/manage-user`}>Manage User</Link>,
       icon: <TableOutlined />,
       key: `/${role}/manage-user`,
+        children: [
+          {
+            label: <Link href={`/${role}/academic/semester`}>Admin</Link>,
+            key: `/${role}/academic/semester`,
+          },
+        {
+          label: <Link href={`/${role}/academic/faculty`}>Driver</Link>,
+          key: `/${role}/academic/faculty`,
+        },
+        {
+          label: <Link href={`/${role}/academic/department`}>Helper</Link>,
+          key: `/${role}/academic/department`,
+        },
+      ],
+    },
+    {
+      label: <Link href={`/${role}/manage-Vehicle`}>Manage Vehicle</Link>,
+      icon: <TableOutlined />,
+      key: `/${role}/manage-Vehicle`,
+        children: [
+          {
+            label: <Link href={`/${role}/academicD/list`}>Vehicle list</Link>,
+            key: `/${role}/academicD/list`,
+          },
+        {
+          label: <Link href={`/${role}/Vehicle/faculty`}>Entry New Vehicle</Link>,
+          key: `/${role}/Vehicle/faculty`,
+        },
+    
+      ],
+    },
+    {
+      label: <Link href={`/${role}/manage-Trip`}>Manage Trip</Link>,
+      icon: <TableOutlined />,
+      key: `/${role}/manage-Trip`,
+        children: [
+          {
+            label: <Link href={`/${role}/academic/Trip`}>Trip List</Link>,
+            key: `/${role}/academicdd/semesterdd`,
+          },
+        {
+          label: <Link href={`/${role}/academic/Trip`}>Pending Trip</Link>,
+          key: `/${role}/academddic/Trip`,
+        },
+      
+      ],
+    },
+    {
+      label: <Link href={`/${role}/manage-Inddcome`}>Income</Link>,
+      icon: <TableOutlined />,
+      key: `/${role}/manage-Idncomdde`,
+        children: [
+          {
+            label: <Link href={`/${role}/academicIncome/Income`}>Income History</Link>,
+            key: `/${role}/academic/dddd`,
+          },
+        {
+          label: <Link href={`/${role}/academiddc/Income`}>Income Sources</Link>,
+          key: `/${role}/academiddddc/dd`,
+        },
+       
+      ],
+    },
+    {
+      label: <Link href={`/${role}/manadge-Ex`}>Expenses</Link>,
+      icon: <TableOutlined />,
+      key: `/${role}/manage-Incomdde`,
+        children: [
+          {
+            label: <Link href={`/${role}/Expenses/dd`}>Expenses History</Link>,
+            key: `/${role}/acaddddemic/dssddd`,
+          },
+        {
+          label: <Link href={`/${role}/academiddddc/Incoddme`}>Expenses Sources</Link>,
+          key: `/${role}/academiddddddc/dd`,
+        },
+       
+      ],
     },
   ];
 
