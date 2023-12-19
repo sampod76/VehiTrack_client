@@ -10,6 +10,7 @@ import { SubmitHandler } from "react-hook-form";
 import loginImage from "../../assets/login-image.png";
 import LoadingForDataFetch from "../Utlis/LoadingForDataFetch";
 import Typewriter from "typewriter-effect";
+import { Error_model_hook, Success_model } from "@/utils/modalHook";
 type FormValues = {
   email: string;
   password: string;
@@ -19,17 +20,38 @@ const LoginPage = () => {
   const [userLogin, { isLoading }] = useUserLoginMutation();
 
   const router = useRouter();
-  const onSubmit: SubmitHandler<FormValues> = async (data) => {
-    console.log("not", data);
-    try {
-      const res = await userLogin({ ...data }).unwrap();
-      console.log(res);
-      if (res.accessToken) {
+  const handleFormSubmit = async (e:any) => {
+    e.preventDefault();
+    const userId = e.target.userid.value;
+    const password = e.target.password.value;
+ 
+
+
+
+ // rtk-query method by bayajid
+ userLogin({ userId, password })
+      .then((result:any) => {
+        // Handle success, update UI, etc.
+       if(result?.data?._id){
+
+         Success_model('login success');
+         localStorage.setItem(
+          "accessToken",
+          JSON.stringify("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhbXBvZG5hdGhAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzAyNzU3OTQ1LCJleHAiOjE3MzQyOTM5NDV9.0qZqsFgfe36B8XwAtJ2BkzatWr5REzwlyHvSp4nY80E")
+        );
         router.push("/dashboard");
-        message.success("User logged in successfully");
-      }
-      storeUserInfo({ accessToken: res?.accessToken });
-    } catch (error) {}
+       }else{
+
+         Error_model_hook("login failed");
+       }
+        console.log("Post created:", result);
+        
+      })
+      .catch((err) => {
+        // Handle error
+        Error_model_hook("login failed");
+        console.error("Error creating post:", err);
+      }); 
   };
   if (isLoading) {
     return <LoadingForDataFetch />;
@@ -54,26 +76,26 @@ const LoginPage = () => {
               />
             
             </div>
-            <div className="w-full max-w-xl xl:px-8 xl:w-5/12">
+            <div className="w-full max-w-xl xl:px-8 xl:w-5/12 ">
               <div className="bg-white rounded shadow-2xl p-7 sm:p-10">
                 <h3 className="mb-4 text-xl font-semibold sm:text-center sm:mb-6 sm:text-2xl">
                   Login Dashboard
                 </h3>
-                <form>
+                <form onSubmit={handleFormSubmit}>
                   <div className="mb-1 sm:mb-2">
                     <label
                       htmlFor="firstName"
                       className="inline-block mb-1 font-medium"
                     >
-                     Email
+                     User Id
                     </label>
                     <input
                       placeholder="Please enter a valid email address"
                       required
-                      type="email"
+                      type="text"
                       className="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
-                      id="email"
-                      name="email"
+                      id="userid"
+                      name="userid"
                     />
                   </div>
                   <div className="mb-1 sm:mb-2">
