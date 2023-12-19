@@ -1,9 +1,10 @@
-import { ProfileOutlined, TableOutlined } from "@ant-design/icons";
+import { ProfileOutlined, ScheduleOutlined, TableOutlined, UserOutlined } from "@ant-design/icons";
 import { MenuProps } from "antd";
 import Link from "next/link";
 import { USER_ROLE } from "./role";
 
 export const sidebarItem = (role: string) => {
+  console.log(role);
   const defaultSidebarItems: MenuProps["items"] = [
     {
       label: "Profile",
@@ -20,22 +21,75 @@ export const sidebarItem = (role: string) => {
 
   const commonAdminSidebarItems: MenuProps["items"] = [
     {
-      label: <Link href={`/${role}/manage-user`}>Manage User</Link>,
-      icon: <TableOutlined />,
-      key: `/${role}/manage-user`,
-        children: [
-          {
-            label: <Link href={`/${role}/academic/semester`}>Admin</Link>,
-            key: `/${role}/academic/semester`,
-          },
+      label: "Manage Users",
+      key: "manage-user",
+      icon: <ScheduleOutlined />,
+      children: [
         {
-          label: <Link href={`/${role}/academic/faculty`}>Driver</Link>,
-          key: `/${role}/academic/faculty`,
+          label: "Admin",
+          key: "Admin",
+          icon: <UserOutlined />,
+          children: [
+            {
+              label: (
+                <Link href={`${role}/admin/all_admin`}>Admin List</Link>
+              ),
+              key: `${role}/admin/all_admin`,
+            },
+            {
+              label: (
+                <Link href={`${role}/admin/create`}>
+                  Create Admin{" "}
+                </Link>
+              ),
+              key: `${role}/admin/create`,
+            },
+          ],
         },
         {
-          label: <Link href={`/${role}/academic/department`}>Helper</Link>,
-          key: `/${role}/academic/department`,
+          label: "Driver",
+          key: "Driver",
+          icon: <UserOutlined />,
+          children: [
+            {
+              label: (
+                <Link href={`${role}/driver/all_driver`}>Driver List</Link>
+              ),
+              key: `${role}/driver/all_driver`,
+            },
+            {
+              label: (
+                <Link href={`${role}/driver/create`}>
+                  Create Driver
+                </Link>
+              ),
+              key: `${role}/driver/create`,
+            },
+          ],
         },
+        {
+          label: "Helper",
+          key: "Helper",
+          icon: <UserOutlined />,
+          children: [
+            {
+              label: (
+                <Link href={`${role}/helper/all_helper`}>Helper List</Link>
+              ),
+              key: `${role}/helper/all-helper`,
+            },
+            {
+              label: (
+                <Link href={`${role}/helper/create`}>
+                  Create Trainer
+                </Link>
+              ),
+              key: `${role}/helper/create`,
+            },
+          ],
+        },
+       
+      
       ],
     },
     {
