@@ -1,8 +1,10 @@
 "use client";
 
-import { Carousel } from "antd";
+import { Carousel, Typography } from "antd";
 import Image from "next/image";
 import { useState } from "react";
+
+const { Title } = Typography;
 
 interface ImageType {
   src: string;
@@ -32,7 +34,14 @@ const ManageVehiclePage = () => {
   };
 
   return (
-    <>
+    <div className="flex ">
+      <div className="flex-1 ">
+        <Title level={2} className="text-center">
+          Vehicle Information
+        </Title>
+
+        <div className="mt-4"></div>
+      </div>
       <div className="w-2/4">
         <Carousel
           dots={true}
@@ -69,7 +78,7 @@ const ManageVehiclePage = () => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
