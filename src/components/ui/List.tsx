@@ -5,7 +5,7 @@ interface IData {
   description: string;
 }
 
-const ListItems = ({ data }: { data: IData[] }) => (
+const MyList = ({ data }: { data: IData[] }) => (
   <List
     itemLayout="horizontal"
     dataSource={data}
@@ -17,4 +17,4 @@ const ListItems = ({ data }: { data: IData[] }) => (
   />
 );
 
-export default ListItems;
+export default MyList;

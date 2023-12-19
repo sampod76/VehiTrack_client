@@ -1,5 +1,6 @@
 "use client";
 
+import MyList from "@/components/ui/List";
 import { Carousel, Typography } from "antd";
 import Image from "next/image";
 import { useState } from "react";
@@ -26,6 +27,37 @@ const images: ImageType[] = [
   },
 ];
 
+const data = [
+  {
+    title: "Brand",
+    description: "description data",
+  },
+  {
+    title: "Registration Year",
+    description: "description data",
+  },
+  {
+    title: "Fuel Type",
+    description: "description data",
+  },
+  {
+    title: "Kilometers run",
+    description: "description data",
+  },
+  {
+    title: "Model",
+    description: "description data",
+  },
+  {
+    title: "Year of Manufacture",
+    description: "description data",
+  },
+  {
+    title: "Engine capacity",
+    description: "description data",
+  },
+];
+
 const ManageVehiclePage = () => {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number>(0);
 
@@ -40,7 +72,9 @@ const ManageVehiclePage = () => {
           Vehicle Information
         </Title>
 
-        <div className="mt-4"></div>
+        <div className="mt-4">
+          <MyList data={data} />
+        </div>
       </div>
       <div className="w-2/4">
         <Carousel
