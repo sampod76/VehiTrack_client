@@ -79,7 +79,7 @@ const FormInput = ({
                 {label}
               </h1>
               <InputNumber
-                // type={type}
+                type={type}
                 style={{width: "100%", marginRight:"2px"}}
                 readOnly={readOnly}
                 disabled={disabled}

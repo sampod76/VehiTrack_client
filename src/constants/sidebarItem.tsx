@@ -86,17 +86,17 @@ export const sidebarItem = (role: string) => {
     {
       label: <Link href={`/${role}/manage-Vehicle`}>Manage Vehicle</Link>,
       icon: <TableOutlined />,
-      key: `/${role}/manage-Vehicle`,
+      key: `vehicle`,
       children: [
         {
-          label: <Link href={`/${role}/academicD/list`}>Vehicle list</Link>,
-          key: `/${role}/academicD/list`,
+          label: <Link href={`/${role}/vehicle/vehicle_list`}>Vehicle list</Link>,
+          key: `/${role}/vehicle/vehicle_list`,
         },
         {
           label: (
-            <Link href={`/${role}/Vehicle/faculty`}>Entry New Vehicle</Link>
+            <Link href={`/${role}/vehicle/create`}>Entry New Vehicle</Link>
           ),
-          key: `/${role}/Vehicle/faculty`,
+          key: `/${role}/vehicle/create`,
         },
       ],
     },

@@ -26,7 +26,7 @@ import LoadingForDataFetch from "@/components/Utlis/LoadingForDataFetch";
 import UMTable from "@/components/ui/Table";
 import Image from "next/image";
 
-const AllAdminList = () => {
+const AllHelperList = () => {
   const SUPER_ADMIN = USER_ROLE.ADMIN;
   const query: Record<string, any> = {};
 
@@ -197,7 +197,7 @@ const AllAdminList = () => {
   //   }
   return (
     <div>
-      <ActionBar title="Admin List">
+      <ActionBar title="Helper List">
         <Input
           size="large"
           placeholder="Search"
@@ -246,4 +246,4 @@ const AllAdminList = () => {
   );
 };
 
-export default AllAdminList;
+export default AllHelperList;
