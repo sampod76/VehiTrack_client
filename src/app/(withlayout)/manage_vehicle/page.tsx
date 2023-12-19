@@ -66,8 +66,8 @@ const ManageVehiclePage = () => {
   };
 
   return (
-    <div className="flex ">
-      <div className="flex-1 ">
+    <div className="flex">
+      <div className="flex-1 px-4">
         <Title level={2} className="text-center">
           Vehicle Information
         </Title>
@@ -76,7 +76,7 @@ const ManageVehiclePage = () => {
           <MyList data={data} />
         </div>
       </div>
-      <div className="w-2/4">
+      <div className="w-2/4 mt-12">
         <Carousel
           dots={true}
           autoplay
