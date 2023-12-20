@@ -52,6 +52,7 @@ const ColumnChart = () => {
       <div id="chart">
         <ReactApexChart
           className="bar-chart"
+          // @ts-ignore
           options={columnChart.options}
           series={columnChart.series}
           type="bar"

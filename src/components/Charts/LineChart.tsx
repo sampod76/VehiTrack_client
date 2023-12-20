@@ -28,6 +28,7 @@ const LineChart = () => {
 
       <ReactApexChart
         className="h-full w-full"
+        // @ts-ignore
         options={lineChart.options}
         series={lineChart.series}
         type="area"
