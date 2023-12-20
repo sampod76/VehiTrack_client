@@ -4,6 +4,7 @@ import Providers from "@/lib/Providers";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { StyleProvider } from "@ant-design/cssinjs";
+// import "@ant-design/flowchart/dist/index.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
