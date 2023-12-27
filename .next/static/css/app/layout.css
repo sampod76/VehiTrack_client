@@ -548,6 +548,9 @@ video {
     max-width: 1536px;
   }
 }
+.fixed{
+  position: fixed;
+}
 .absolute{
   position: absolute;
 }
@@ -605,6 +608,9 @@ video {
 }
 .mb-\[14px\]{
   margin-bottom: 14px;
+}
+.ml-1{
+  margin-left: 0.25rem;
 }
 .ml-2{
   margin-left: 0.5rem;
@@ -858,6 +864,9 @@ video {
 .p-2{
   padding: 0.5rem;
 }
+.p-3{
+  padding: 0.75rem;
+}
 .p-5{
   padding: 1.25rem;
 }
@@ -878,6 +887,10 @@ video {
 .px-4{
   padding-left: 1rem;
   padding-right: 1rem;
+}
+.py-1{
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 .py-16{
   padding-top: 4rem;
@@ -937,6 +950,14 @@ video {
   font-size: 1.875rem;
   line-height: 2.25rem;
 }
+.text-base{
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.text-lg{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
 .text-sm{
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -954,6 +975,9 @@ video {
 }
 .font-medium{
   font-weight: 500;
+}
+.font-normal{
+  font-weight: 400;
 }
 .font-semibold{
   font-weight: 600;
@@ -1499,6 +1523,14 @@ span.blue {
     grid-column: span 7 / span 7;
   }
 
+  .lg\:block{
+    display: block;
+  }
+
+  .lg\:hidden{
+    display: none;
+  }
+
   .lg\:max-w-screen-xl{
     max-width: 1280px;
   }
@@ -1519,6 +1551,16 @@ span.blue {
   .lg\:py-20{
     padding-top: 5rem;
     padding-bottom: 5rem;
+  }
+
+  .lg\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .lg\:text-lg{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }
 
