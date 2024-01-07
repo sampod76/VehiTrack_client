@@ -1,4 +1,0 @@
-{
-  "/(withlayout)/profile/page": "app/(withlayout)/profile/page.js",
-  "/(withlayout)/dashboard/page": "app/(withlayout)/dashboard/page.js"
-}
